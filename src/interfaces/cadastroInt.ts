@@ -1,4 +1,4 @@
-export default interface Cadastro {
+export default interface ICadastro {
     id?: number;
     nome: string;
     email: string;

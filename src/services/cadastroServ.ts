@@ -1,23 +1,23 @@
 import Service from "./service";
 import CadastroModel from "../models/cadastroMod";
-import Cadastro from "../interfaces/cadastroInt";
+import ICadastro from "../interfaces/cadastroInt";
 import { SimpleModel } from "../models/model";
 
-export class CadastroService extends Service<Cadastro> {
-    constructor(model: SimpleModel<Cadastro> = new CadastroModel()) {
+export class CadastroService extends Service<ICadastro> {
+    constructor(model: SimpleModel<ICadastro> = new CadastroModel()) {
         super(model);
     }
 
-    async create(obj: Cadastro): Promise<void> {
-        // Implementar todos os métodos abaixo********************************
+    async create(obj: ICadastro): Promise<void> {
+        // Implementar todos os métodos abaixo com Middlewares *******************************************************************
         return super.create(obj);
     }
 
-    async list(): Promise<Cadastro[]> {
+    async list(): Promise<ICadastro[]> {
         return super.list();
     }
 
-    async find(id: number): Promise<Cadastro> {
+    async find(id: number): Promise<ICadastro> {
         return super.find(id);
     }
 }
